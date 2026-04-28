@@ -79,8 +79,4 @@ with col_h1:
     if st.button("💰 후원 계좌번호 보기"):
         st.success(f"{my_bank} {my_account}")
 
-with col_h2:
-    st.link_button("🎁 토스로 바로 송금", toss_link)
-
-st.caption("여러분의 후원은 더 좋은 AI 서비스를 만드는 데 큰 힘이 됩니다!")
 
