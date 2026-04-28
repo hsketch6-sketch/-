@@ -6,8 +6,8 @@ GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 client = Groq(api_key=GROQ_API_KEY)
 
 # --- 2. 웹 페이지 설정 ---
-st.set_page_config(page_title="AI 점심 추천기", page_icon="🍱")
-st.title("🤖 중1 개발자의 '기분 분석' 점심 추천")
+st.set_page_config(page_title="AI 점심 추천기", page_icon="")
+st.title(" 중1 개발자의 '기분 분석' 점심 추천")
 st.write("지금 기분이나 상황을 문장으로 적어주세요!")
 
 # --- 3. 사용자 입력 섹션 ---
@@ -31,7 +31,7 @@ if st.button("AI에게 추천받기"):
                             "content": user_msg,
                         }
                     ],
-                    model="llama-3.3-70b-versatile", # 고성능 무료 모델
+                    model="mixtral-8x7b-32768",# 고성능 무료 모델
                 )
                 
                 result = chat_completion.choices[0].message.content
