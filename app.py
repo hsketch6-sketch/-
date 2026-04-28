@@ -37,7 +37,7 @@ if st.button("AI에게 추천받기"):
                             "content": user_msg,
                         }
                     ],
-                    model="llama-3.1-70b-versatile"
+                    model="llama-3.3-70b-specdec" 
                 )
                 
                 result = chat_completion.choices[0].message.content
