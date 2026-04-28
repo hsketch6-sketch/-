@@ -37,9 +37,8 @@ if st.button("AI에게 추천받기"):
                 
                 # 들여쓰기 수정 및 한자 제거 로직
                 raw_result = chat_completion.choices[0].message.content
-                clean_result = re.sub(r'[\u4e00-\u9fff]+', '', raw_result) # 한자 제거
+                clean_result = re.sub(r'[^가-힣0-9\s.,!?]', '', raw_result)
                 clean_result = clean_result.replace(", ", " ").strip()
-
                 st.success("✅ 오늘 너에게 딱 맞는 메뉴는?")
                 st.subheader(clean_result) # 변수 이름 통일
                 st.balloons()
