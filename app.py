@@ -38,7 +38,8 @@ if st.button("AI에게 추천받기"):
                             "content": user_msg,
                         }
                     ],
-                    model="gemma2-9b-it"
+                    model="llama-3.3-70b-versatile"
+
 
                 )
                 
