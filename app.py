@@ -30,6 +30,7 @@ if st.button("AI에게 추천받기"):
            "2. 사용자가 헛소리(음식과 상관없는 말)를 하면 '제대로 말해줘!'라고 짧게 끊어. "
            "3. 추천할 때는 딱 1개의 메뉴만 골라주고, 이유를 아주 친근하고 재밌게 한 문장으로 써줘. "
            "4. 형식은 반드시 [메뉴이름] 이유 로 출력해."
+           "5. 반드시 사용자의 말을 보고 제대로 생각해서 출력해(ex.매운걸 원한다고 했는데 불고기를 추천하는 등의 불상사가 일어나면 안돼!)"
 
                         },
                         {
@@ -37,7 +38,8 @@ if st.button("AI에게 추천받기"):
                             "content": user_msg,
                         }
                     ],
-                    model="llama-3.3-70b-versatile" 
+                    model="gemma2-9b-it"
+
                 )
                 
                 result = chat_completion.choices[0].message.content
