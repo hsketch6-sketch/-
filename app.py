@@ -36,7 +36,7 @@ if st.button("AI에게 추천받기"):
                 )
                 
                 # 들여쓰기 수정 및 한자 제거 로직
-                raw_result = chat_completion.choices.message.content
+                raw_result = chat_completion.choices[0].message.content
                 clean_result = re.sub(r'[\u4e00-\u9fff]+', '', raw_result) # 한자 제거
                 clean_result = clean_result.replace(", ", " ").strip()
 
