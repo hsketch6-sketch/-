@@ -37,7 +37,7 @@ if st.button("AI에게 추천받기"):
                             "content": user_msg,
                         }
                     ],
-                    model="llama-3.3-70b-specdec" 
+                    model="llama-3.3-70b-versatile" 
                 )
                 
                 result = chat_completion.choices[0].message.content
@@ -66,8 +66,3 @@ col1, col2 = st.columns(2) # 버튼을 예쁘게 배치하기 위해 칸 나누�
 with col1:
     if st.button("💰 후원 계좌번호 보기"):
         st.success(f"{my_bank} {my_account}")
-
-with col2:
-    st.link_button("🎁 토스로 바로 송금", toss_link)
-
-st.caption("여러분의 후원은 더 좋은 AI 서비스를 만드는 데 큰 힘이 됩니다!")
